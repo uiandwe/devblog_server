@@ -1,0 +1,66 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width: 100%;
+
+}
+
+a {
+    color: #4c4c4c;
+}
+a:link, a:visited  {
+    text-decoration: none;
+}
+
+
+
+
+.container{
+    margin: 0 auto;
+    width: 800px;
+}
+
+.posts{
+    margin: 50px 0;
+}
+
+.posts ul{
+    list-style-type: none;
+}
+
+.posts ul li{
+    margin: 50px 0;
+}
+
+.posts ul li span.category{
+    width :100px;
+    display: inline-block;
+}
+
+.posts ul li span.title{
+    font-size: 20px;
+}
+
+.posts .category-travel{
+
+}
+
+.posts .category-dev{
+
+}
+
+.posts .category-life{
+
+}
+
+.posts .category-think{
+
+}
+
+.posts .category-review{
+
+}
