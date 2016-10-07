@@ -15,6 +15,6 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 # from .decorators import check_draft
 
 
-class PostListView(ListView):
-    # model = Post
-    template_name = "blog/blog_list.html"
+def BlogListView(request):
+
+    return render(request, "blog/blog_list.html", {})
