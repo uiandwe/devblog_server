@@ -18,3 +18,8 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 def BlogListView(request):
 
     return render(request, "blog/blog_list.html", {})
+
+
+def BlogDetail(request):
+
+    return render(request, "blog/blog_detail.html", {})
