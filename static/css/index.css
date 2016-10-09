@@ -4,6 +4,7 @@
     padding: 0;
 }
 
+
 body{
     width: 100%;
 
@@ -70,4 +71,36 @@ a:link, a:visited  {
 
 .posts .category-review, .posts .category-review a:hover, .posts .category-review .category{
     color: #e74c3c !important;
+}
+
+
+.post-wrapper{
+
+}
+
+.post-wrapper article{
+
+}
+
+.post-wrapper article h2{
+    font-size: 26px;
+    font-weight: 600;
+    margin-top: 50px;
+    margin-bottom: 15px;
+}
+
+.post-wrapper article span.meta{
+    display: block;
+    margin-bottom: 50px;
+}
+
+.post-wrapper article .content{
+    line-height: 2em;
+}
+
+.post-wrapper article .content p{
+    margin-bottom: 1.8em;
+}
+.post-wrapper article .content img{
+    max-width: 800px;
 }
