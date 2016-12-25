@@ -19,4 +19,6 @@ from django.contrib import admin
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^blog/', include("blog.urls", namespace="blog")),
+    url(r'^api/blog/', include("blog.api.urls", namespace="blogs-api")),
+    url(r'^api/auth/', include('rest_framework.urls', namespace='rest_framework')),
 ]
