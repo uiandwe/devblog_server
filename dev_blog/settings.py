@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.sites',
     'rest_framework',
-    'blog'
+    'blog',
+    'accounts'
 ]
 
 REST_FRAMEWORK = {
@@ -143,3 +144,6 @@ TEMPLATE_DIRS = (
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'static/media')
 MEDIA_URL = '/static/media/'
+
+
+SITE_ID = 1
