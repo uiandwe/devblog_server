@@ -23,3 +23,8 @@ def BlogListView(request):
 def BlogDetail(request):
 
     return render(request, "blog/blog_detail.html", {})
+
+
+def BlogCreate(request):
+
+    return render(request, "blog/create.html", {})

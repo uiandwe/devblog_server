@@ -5,17 +5,29 @@
     <meta charset="UTF-8">
     <title></title>
     <link rel="stylesheet" href="/static/css/index.css" type="text/css">
+    <link rel="stylesheet" href="/static/css/main.css" type="text/css">
+
+
 </head>
 <body>
     <div class="container">
         <div class="title">
-
             <h1>
                 <a>blog</a>
             </h1>
         </div>
+
+    {% verbatim %}
+    <div id="app">
+
+    </div>
+    {% endverbatim %}
+
     {% block content %}
     {% endblock %}
     </div>
+    <script src="//code.jquery.com/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.26/vue.min.js"></script>
+    <script src="/static/js/build.js"></script>
 </body>
 </html>

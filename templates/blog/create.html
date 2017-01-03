@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <script src="//cdn.ckeditor.com/4.6.1/basic/ckeditor.js"></script>
+
+    <div  class="post-wrapper">
+       <form>
+            <textarea name="editor1" id="editor1" rows="10" cols="80">
+                This is my textarea to be replaced with CKEditor.
+            </textarea>
+            <script>
+                var editor = CKEDITOR.replace( 'editor1' );
+            </script>
+        </form>
+
+    </div>
+
+    <script>
+
+    editor.on( 'change', function( evt ) {
+        var data = CKEDITOR.instances.editor1.getData();
+        console.log( 'Total bytes: ' + evt.editor.getData().length );
+        console.log(data);
+    });
+    </script>
+
+{% endblock %}
