@@ -21,7 +21,7 @@ gulp.task('minifycss', function() {
 });
 
 gulp.task('compile-sass', function () {
-    return gulp.src('static/src/scss/*.scss')
+    return gulp.src('static/src/scss/main.scss')
         .pipe(sass())
         .pipe(minifyCss({compatibility: 'ie8'}))
         .pipe(gulp.dest('static/css/'))
