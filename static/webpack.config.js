@@ -8,47 +8,32 @@ module.exports = {
     publicPath: '/dist/',
     filename: 'build.js'
   },
+  resolveLoader: {
+    root: path.join(__dirname, 'node_modules'),
+  },
   module: {
-    rules: [
+    loaders: [
       {
         test: /\.vue$/,
-        loader: 'vue-loader',
-        options: {
-          loaders: {
-            // Since sass-loader (weirdly) has SCSS as its default parse mode, we map
-            // the "scss" and "sass" values for the lang attribute to the right configs here.
-            // other preprocessors should work out of the box, no loader config like this nessessary.
-            'scss': 'vue-style-loader!css-loader!sass-loader',
-            'sass': 'vue-style-loader!css-loader!sass-loader?indentedSyntax'
-          }
-          // other vue-loader options go here
-        }
+        loader: 'vue'
       },
       {
         test: /\.js$/,
-        loader: 'babel-loader',
+        loader: 'babel',
         exclude: /node_modules/
       },
       {
         test: /\.(png|jpg|gif|svg)$/,
-        loader: 'file-loader',
-        options: {
+        loader: 'file',
+        query: {
           name: '[name].[ext]?[hash]'
         }
       }
     ]
   },
-  resolve: {
-    alias: {
-      'vue$': 'vue/dist/vue.common.js'
-    }
-  },
   devServer: {
     historyApiFallback: true,
     noInfo: true
-  },
-  performance: {
-    hints: false
   },
   devtool: '#eval-source-map'
 }
@@ -63,13 +48,10 @@ if (process.env.NODE_ENV === 'production') {
       }
     }),
     new webpack.optimize.UglifyJsPlugin({
-      sourceMap: true,
       compress: {
         warnings: false
       }
     }),
-    new webpack.LoaderOptionsPlugin({
-      minimize: true
-    })
+    new webpack.optimize.OccurenceOrderPlugin()
   ])
 }
