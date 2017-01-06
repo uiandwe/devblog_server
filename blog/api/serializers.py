@@ -10,5 +10,6 @@ class BlogSerializer(ModelSerializer):
             'user',
             'title',
             'content',
+            'category',
             'created_at',
         ]

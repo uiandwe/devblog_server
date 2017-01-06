@@ -6,6 +6,7 @@ class Blog(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL, default=1)
     title = models.CharField(max_length=120)
     content = models.TextField()
+    category = models.CharField(max_length=120)
     draft = models.BooleanField(default=False)
     created_at = models.DateTimeField(auto_now=True, auto_now_add=False)
 

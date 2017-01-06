@@ -2,9 +2,8 @@
   <main-layout>
     <div  class="posts">
        <ul>
-
           <li class="category-travel">
-              <a href="/travel/nh211-first-class-chapter2.html">
+              <a href="/detail">
                   <span class="category">travel</span>
                   <span class="title">처음 타보는 퍼스트 클래스, ANA NH211 - 후편</span>
                   <span class="time">03 Oct 2016</span>
