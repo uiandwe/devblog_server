@@ -2,18 +2,17 @@
 
 {% block content %}
 
-
     <div  class="posts" id="blog_list">
        <ul>
-           {% verbatim %}
+
            <li class="category-travel" v-for="item in blog_list">
-              <a href="/blog/detail/">
+              <a href="[[item.link]]">
                   <span class="category">[[item.category]]</span>
                   <span class="title">[[item.title]]</span>
                   <span class="time">[[item.date]]</span>
               </a>
-          </li>
-          {% endverbatim %}
+            </li>
+
 
           <li class="category-travel">
               <a href="/travel/nh211-first-class-chapter1.html">

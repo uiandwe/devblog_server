@@ -4,3 +4,4 @@ node_modules/
 static/node_modules/
 static/npm-debug.log
 npm-debug.log
+./db.sqlite3

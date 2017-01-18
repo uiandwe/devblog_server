@@ -16,8 +16,15 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 
 
 def BlogListView(request):
+    content = {
+        'user': unicode(request.user),
+    }
 
-    return render(request, "blog/blog_list.html", {})
+    return render(request, "blog/blog_list.html", {
+
+        'content': content
+
+    })
 
 
 def BlogDetail(request):

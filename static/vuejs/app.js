@@ -7,7 +7,7 @@ var demo = new Vue({
     data: {
         'apptitle': 'Django Vue.JS Job Board',
         'jobs': [],
-        title: 'vue blog',
+        title: 'blog',
         blog_list:[
             {
                 'title': '처음 타보는 퍼스트 클래스, ANA NH211 - 후편',

@@ -12,6 +12,8 @@ class BlogListAPIView(ListAPIView):
     def get_queryset(self, *args, **kwargs):
         queryset_list = Blog.objects.all()
         query = self.request.GET.get("q")
+
+        print unicode(self.request.user)
         if query:
             queryset_list = queryset_list.filter(
                 Q(title__icontains=query) |

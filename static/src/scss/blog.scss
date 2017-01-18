@@ -1,0 +1,105 @@
+a {
+  color: #4c4c4c;
+  &:link, &:visited {
+    text-decoration: none;
+  }
+}
+
+.container {
+  margin: 0 auto;
+  width: 800px;
+  padding-top: 20px;
+
+
+  .title{
+    position: relative;
+    height: 80px;
+    .d-title-logo{
+      display: inline-block;
+    }
+    .d-btn.d-write-post{
+      position: absolute;
+      top: 0;
+      right: 0;
+
+    }
+  }
+}
+
+.posts {
+  margin: 50px 0;
+  ul {
+    list-style-type: none;
+    padding-left: 0px;
+    li {
+      margin: 20px 0;
+      span {
+        &.category {
+          width: 100px;
+          display: inline-block;
+          float: left;
+          line-height: 20px;
+          font-size: 12px;
+          font-family: Whitney SSm A,Whitney SSm B,Noto Sans CJK KR,Noto Sans KR,Apple SD Gothic Neo,Malgun Gothic,Dotum,sans-serif;
+          text-transform: uppercase;
+          letter-spacing: .05em;
+        }
+        &.title {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+  .category-travel {
+    color: #9b59b6 !important;
+    a:hover, .category {
+      color: #9b59b6 !important;
+    }
+  }
+  .category-dev {
+    color: #3498db !important;
+    a:hover, .category {
+      color: #3498db !important;
+    }
+  }
+  .category-life {
+    color: #f39c12 !important;
+    a:hover, .category {
+      color: #f39c12 !important;
+    }
+  }
+  .category-think {
+    color: #1abc9c !important;
+    a:hover, .category {
+      color: #1abc9c !important;
+    }
+  }
+  .category-review {
+    color: #e74c3c !important;
+    a:hover, .category {
+      color: #e74c3c !important;
+    }
+  }
+}
+
+.post-wrapper article {
+  h2 {
+    font-size: 26px;
+    font-weight: 600;
+    margin-top: 50px;
+    margin-bottom: 15px;
+  }
+  span.meta {
+    display: block;
+    margin-bottom: 50px;
+  }
+  .content {
+    line-height: 2em;
+    p {
+      margin-bottom: 1.8em;
+    }
+    img {
+      max-width: 800px;
+    }
+  }
+}
