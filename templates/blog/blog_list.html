@@ -1,12 +1,11 @@
 {% extends "layout.html" %}
 
 {% block content %}
-
     <div  class="posts" id="blog_list">
        <ul>
 
            <li class="category-travel" v-for="item in blog_list">
-              <a href="[[item.link]]">
+              <a href="/blog/[[item.pk]]">
                   <span class="category">[[item.category]]</span>
                   <span class="title">[[item.title]]</span>
                   <span class="time">[[item.date]]</span>

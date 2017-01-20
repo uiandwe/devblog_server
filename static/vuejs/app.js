@@ -2,7 +2,7 @@
 
 Vue.config.delimiters = ["[[","]]"]
 
-var demo = new Vue({
+var app = new Vue({
     el: '#app',
     data: {
         'apptitle': 'Django Vue.JS Job Board',
@@ -16,6 +16,7 @@ var demo = new Vue({
                 'link': '/blog/detail/'
             }
         ]
+
     },
     methods: {
         addJob: function () {
@@ -33,7 +34,6 @@ var demo = new Vue({
     },
     ready: function()
         {
-            console.log(this.title);
-            console.log("vue") ;
+
         }
 });

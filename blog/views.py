@@ -27,8 +27,7 @@ def BlogListView(request):
     })
 
 
-def BlogDetail(request):
-
+def BlogDetail(request, id):
     return render(request, "blog/blog_detail.html", {})
 
 

@@ -10,12 +10,12 @@
 
 </head>
 
-<body id="app">
+<body >
 
     <div class="container">
         <div class="title">
             <h1 class="d-title-logo">
-                <a href="/">[[ title ]]</a>
+                <a href="/">blog</a>
             </h1>
             {%  if content.user != 'AnonymousUser' %}
                 <a class="d-btn d-write-post" type="button" href="/blog/create" >글쓰기</a>
@@ -30,8 +30,9 @@
     <script src="/static/js/index.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.21/vue.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue-resource/0.7.0/vue-resource.min.js"></script>
-    <script type="text/javascript" src="{% static 'vuejs/app.js' %}"></script>
+
     <script type="text/javascript" src="{% static 'vuejs/blog-list.js' %}"></script>
+    <script type="text/javascript" src="{% static 'vuejs/blog-detail.js' %}"></script>
 </body>
 
 </html>

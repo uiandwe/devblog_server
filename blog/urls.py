@@ -5,7 +5,7 @@ from . import views
 
 urlpatterns = [
     url(regex=r"^$", view=views.BlogListView, name="list"),
-    url(regex=r"^detail/$", view=views.BlogDetail, name="detail"),
+    url(regex=r"^(?P<id>\d+)$", view=views.BlogDetail, name="detail"),
     url(regex=r"^create/$", view=views.BlogCreate, name="create"),
 
     # url(regex=r"^(?P<pk>\d+)/$", view=views.PostDetailView.as_view(), name="detail"),
