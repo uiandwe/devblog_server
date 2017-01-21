@@ -17,7 +17,8 @@
             <h1 class="d-title-logo">
                 <a href="/">blog</a>
             </h1>
-            {%  if content.user != 'AnonymousUser' %}
+
+            {%  if user.user != 'AnonymousUser' %}
                 <a class="d-btn d-write-post" type="button" href="/blog/create" >글쓰기</a>
             {%  endif %}
         </div>
@@ -33,6 +34,7 @@
 
     <script type="text/javascript" src="{% static 'vuejs/blog-list.js' %}"></script>
     <script type="text/javascript" src="{% static 'vuejs/blog-detail.js' %}"></script>
+    <script type="text/javascript" src="{% static 'vuejs/blog-create.js' %}"></script>
 </body>
 
 </html>

@@ -3,16 +3,28 @@
 {% block content %}
     <script src="//cdn.ckeditor.com/4.6.1/basic/ckeditor.js"></script>
 
-    <div  class="post-wrapper">
+    <div  class="post-wrapper" id="blog_create">
        <form>
+           {% csrf_token %}
+           <input type="hidden" value="{{ userId }}" name="userId" v-model="userId">
+
+           <input type="text" name="title">
+           <select name="category">
+               <option value="dev">dev</option>
+               <option value="life">life</option>
+               <option value="travel">travel</option>
+               <option value="think">think</option>
+               <option value="review">review</option>
+           </select>
             <textarea name="editor1" id="editor1" rows="10" cols="80">
                 This is my textarea to be replaced with CKEditor.
             </textarea>
             <script>
                 var editor = CKEDITOR.replace( 'editor1' );
             </script>
-        </form>
 
+           <button type="button" v-on:click="createPostSend()">생성</button>
+        </form>
     </div>
 
     <script>

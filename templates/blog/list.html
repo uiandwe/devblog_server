@@ -4,7 +4,7 @@
     <div  class="posts" id="blog_list">
        <ul>
 
-           <li class="category-travel" v-for="item in blog_list">
+           <li class="category-[[item.category]]" v-for="item in blog_list">
               <a href="/blog/[[item.pk]]">
                   <span class="category">[[item.category]]</span>
                   <span class="title">[[item.title]]</span>

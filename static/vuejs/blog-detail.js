@@ -13,7 +13,6 @@ var blogDetail = new Vue({
     },
     ready: function()
     {
-
         this.$http.get('/api'+this.get_domain_name(window.location.href)[2]).then(function (response) {
             this.post_data = response.data;
         },

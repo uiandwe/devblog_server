@@ -11,12 +11,7 @@ var blogList = new Vue({
     ready: function()
     {
         this.$http.get('/api/blog/').then(function (response) {
-
             this.blog_list = this.blog_list.concat(response.data);
-            console.log(app.blog_list);
-        },
-        function (response) {
-            console.log(response);
         });
     }
 });

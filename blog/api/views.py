@@ -10,10 +10,8 @@ class BlogListAPIView(ListAPIView):
     serializer_class = BlogSerializer
 
     def get_queryset(self, *args, **kwargs):
-        queryset_list = Blog.objects.all()
+        queryset_list = Blog.objects.all().order_by('-created_at')
         query = self.request.GET.get("q")
-
-        print unicode(self.request.user)
         if query:
             queryset_list = queryset_list.filter(
                 Q(title__icontains=query) |

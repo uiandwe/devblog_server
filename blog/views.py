@@ -16,21 +16,17 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 
 
 def BlogListView(request):
-    content = {
-        'user': unicode(request.user),
-    }
 
-    return render(request, "blog/blog_list.html", {
-
-        'content': content
-
+    return render(request, "blog/list.html", {
+        'user': unicode(request.user)
     })
 
 
 def BlogDetail(request, id):
-    return render(request, "blog/blog_detail.html", {})
+    return render(request, "blog/detail.html", {})
 
 
 def BlogCreate(request):
-
-    return render(request, "blog/create.html", {})
+    return render(request, "blog/create.html", {
+        'userId': request.user.id
+    })
