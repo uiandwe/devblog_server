@@ -7,25 +7,28 @@
     <link rel="stylesheet" href="/static/css/reset.css" type="text/css">
     <link rel="stylesheet" href="/static/css/main.css" type="text/css">
     <link rel="stylesheet" href="/static/css/blog.css" type="text/css">
+    <link rel="stylesheet" href="/static/css/blog-mediaqueries.css" type="text/css">
 
 </head>
 
 <body >
 
     <div class="container">
-        <div class="title">
-            <h1 class="d-title-logo">
-                <a href="/">blog</a>
-            </h1>
+        <div class="container-wrapper">
+            <div class="d-title-wrapper">
+                <h1 class="d-title-logo">
+                    <a href="/">blog</a>
+                </h1>
 
-            {%  if user.user != 'AnonymousUser' %}
-                <a class="d-btn d-write-post" type="button" href="/blog/create" >글쓰기</a>
-            {%  endif %}
+                {%  if user != True  %}
+                    <a class="d-btn d-write-post" type="button" href="/blog/create" >글쓰기</a>
+                {%  endif %}
+            </div>
+
+
+            {% block content %}
+            {% endblock %}
         </div>
-
-
-    {% block content %}
-    {% endblock %}
     </div>
     <script src="//code.jquery.com/jquery.min.js"></script>
     <script src="/static/js/index.js"></script>

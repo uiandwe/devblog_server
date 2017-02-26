@@ -25,10 +25,10 @@ var app = new Vue({
                 jobdescription: this.jobdescription.trim()
             };
 
-            this.$http.post('http://127.0.0.1:8000/api/jobs/', newJob);
+            this.$http.post('/api/jobs/', newJob);
         },
         removeJob: function (index) {
-            this.$http.delete('http://127.0.0.1:8000/api/jobs/'.concat(this.jobs[index].id));
+            this.$http.delete('/api/jobs/'.concat(this.jobs[index].id));
             this.jobs.splice(index, 1);
         }
     },

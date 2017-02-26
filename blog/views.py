@@ -18,7 +18,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 def BlogListView(request):
 
     return render(request, "blog/list.html", {
-        'user': unicode(request.user)
+        'user': request.user.is_anonymous
     })
 
 
@@ -27,6 +27,12 @@ def BlogDetail(request, id):
 
 
 def BlogCreate(request):
+
+    if request.user.is_anonymous:
+        return render(request, "blog/list.html", {
+            'user': request.user.is_anonymous
+        })
+
     return render(request, "blog/create.html", {
         'userId': request.user.id
     })

@@ -19,16 +19,16 @@ var blogCreate = new Vue({
 
             console.log(body)
 
-            // $.ajax({
-            //     url : '/api/blog/create/',
-            //     type: "POST",
-            //     data : body,
-            //     dataType : "json",
-            //     success: function( data ){
-            //         alert("생성하였습니다 ");
-            //         window.location.href = '/';
-            //     }
-            // });
+             $.ajax({
+                 url : '/api/blog/create/',
+                 type: "POST",
+                 data : body,
+                 dataType : "json",
+                 success: function( data ){
+                     alert("생성하였습니다 ");
+                     window.location.href = '/';
+                 }
+             });
 
         },
 

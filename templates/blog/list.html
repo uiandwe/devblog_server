@@ -2,13 +2,12 @@
 
 {% block content %}
     <div  class="posts" id="blog_list">
-       <ul>
+       <ul class="d-blog-wrapper">
 
-           <li class="category-[[item.category]]" v-for="item in blog_list">
+           <li class="d-blog category-[[item.category]]" v-for="item in blog_list">
               <a href="/blog/[[item.pk]]">
-                  <span class="category">[[item.category]]</span>
-                  <span class="title">[[item.title]]</span>
-                  <span class="time">[[item.date]]</span>
+                  <span class="d-text category">[[item.category]]</span>
+                  <span class="d-text title">[[item.title]]</span>
               </a>
             </li>
 
